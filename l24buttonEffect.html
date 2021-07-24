@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Creative Button Hover Effect</title>
+    <style type="text/css">
+    body{
+        font-family: sans-serif;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0;
+        overflow: hidden;
+    }
+    a{
+        text-decoration: none;
+        width:300px;
+        height: 60px;
+
+        background-color:transparent;
+        color:#fff;
+
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 2px;
+
+        text-align: center;
+        line-height: 60px;
+
+        position: relative;
+    }
+    a::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: skyblue;
+
+        position:absolute;
+        top: -3px;
+        left: -3px;
+
+        z-index: -1;
+        
+        /* Color 2 ku ko yaw pyit ml */
+        mix-blend-mode:multiply;
+
+        transform-origin: top;
+        transition: all 0.3s;
+
+    }
+    a:hover{
+        color:#272727;
+    }
+    a::after{
+        content:'';
+        width: 100%;
+        height: 100%;
+        background-color: tomato;
+
+        position: absolute;
+        top: 3px;
+        left: 3px;
+
+        z-index: -1;
+        
+        /* Color 2 ku ko yaw pyit ml */
+        mix-blend-mode:multiply;
+
+        transform-origin: bottom;
+        transition: all 0.3s;
+    }
+
+    a:hover::before{
+        /* overwrite top:-3px line 42 */
+        top:-6px;
+        left:0;
+        transform: perspective(1000px) rotateX(75deg);
+    }
+    a:hover::after{
+        /* overwrite top: 3px line 64 */
+        top:6px;
+        left:0;
+        transform: perspective(1000px) rotateX(-75deg);
+    }
+    </style>
+</head>
+<body>
+    <a href="#">Button Hover Effect</a>
+</body>
+</html>

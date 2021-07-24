@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Phone Ringing</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<style type="text/css">
+    body{
+        height: 100vh;
+        background-color: #272727;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0;
+        overflow: hidden;
+    }
+    .ringing{
+        width:100px;
+        height: 100px;
+        color:#fff;
+        font-size: 48px;
+        background-color: lime;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 100px;
+
+        position: relative;
+    }
+    .ringing::before,.ringing::after{
+        content: '';
+        /* background-color: red; */
+
+        position: absolute;
+        top:-20px;
+        left:-20px;
+        bottom: -20px;
+        right: -20px;
+
+        border-radius: 50%;
+        border:1px solid lime;
+        
+        animation-name: myani;
+        animation-duration: 1.5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+
+        opacity: 0;
+    }
+    .ringing::after{
+        animation-delay: 0.5s;
+    }
+    @keyframes myani{
+        0%{
+            opacity: 0;
+            transform: scale(0.5);
+        }
+        50%{
+            opacity: 1;
+            transform: scale(1);
+        }
+        100%{
+            opacity: 0;
+            transform: scale(1.2);
+        }
+    }
+</style>
+<body>
+ <div class="ringing"><i class="fas fa-phone"></i></div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transform Basic</title>
+</head>
+<style type="text/css">
+    .container{
+        width:960px;
+    }
+    .container .move{
+        width: 150px;
+        height: 60px;
+        background-color: rgb(207, 50, 76);
+        color:#fff;
+        font-size: 20px;
+        padding:10px 15px;
+        margin:2rem;
+
+        /* horizontal center */
+        text-align: center;
+        /* vertical center */
+        line-height: 60px;
+        /* 0.5rem=8px */
+        border-radius: 0.5rem;
+
+        transition: transform 2s;
+    }
+    #scale:hover{ 
+        /* display: none lo pyit twr ml */
+        transform: scale(0);
+        transform: scaleX(2);
+        transform: scaleY(2);
+        /* X Y  */
+        transform: scale(2);
+    }
+    #translate:hover{
+                               /* X Y to right*/
+        transform: translate(200px,0);
+                               /* X Y to left*/
+        transform: translate(-200px,0);
+        
+        /* transform: translateX(100px);
+        only X
+        transform: translate(100px);
+        transform: translateY(200px);
+        transform: translate(100px,100px);
+        transform: translate(-200px,0); */
+
+    }
+    #rotate:hover{
+        /* X Y */
+        transform: rotate(-180deg);
+        transform: rotate(90deg);
+        transform: rotateX(-60deg);
+        transform: rotateY(60deg);
+        transform: rotate(90deg);
+        transform: rotate(90deg,90deg);
+    }
+    #skew:hover{
+        transform: skewX(-45deg);
+        /* only X */
+        transform: skew(-45deg);
+
+        transform: skewY(70deg);
+        transform: skew(-70deg,-70deg);
+    }
+</style>
+<body>
+    <div class="container">
+        <div id="scale" class="move">Scale Me</div>
+        <div id="translate" class="move">Translate Me</div>
+        <div id="rotate" class="move">Rolate Me</div>
+        <div id="skew" class="move">Skew Me</div>
+    </div>
+</body>
+</html>

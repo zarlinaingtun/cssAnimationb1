@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Keyfram Properties</title>
+</head>
+<style type="text/css">
+    body{
+        margin: 0;
+    }
+    div{
+        width: 150px;
+        height: 150px;
+        background-color: red;
+
+        animation-name: myani;
+        animation-duration: 5s;
+        /* animation-fill-mode:forwards; */
+
+        /* Animation Iteration count(Default-1) */
+        /* animation-iteration-count:1; */
+        /* animation-iteration-count:3; */
+        animation-iteration-count:infinite;
+       
+        
+        /* Animation timing Function */
+        /* animation-timing-function:ease;
+        animation-timing-function:ease-in;
+        animation-timing-function:ease-out;
+        animation-timing-function:ease-in-out; */
+        animation-timing-function:linear;
+        
+        /* Animation direction */
+        /* animation-direction:normal;
+        animation-direction: reverse;
+        animation-direction: alternate; */
+        animation-direction: alternate-reverse;
+                /*name adur itc  atf  adir adelay */
+        animation: myani 3s 3 ease-in alternate 2s;
+    }
+    @keyframes myani{
+        0%{
+            transform: translateX(0px);
+        }
+        50%{
+            transform: translateX(1000px);
+        }
+        100%{
+            transform: translate(1000px,500px);
+        }
+    }
+</style>
+<body>
+    <div></div>
+</body>
+</html>

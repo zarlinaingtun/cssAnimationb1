@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animation Button</title>
+</head>
+<style type="text/css">
+    body{
+        font-family: sans-serif;
+        background-color: #222;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        margin: 0;
+        overflow: hidden;
+    }
+    a{
+       text-decoration: none;
+       color:#fff;
+       font-size: 40px;
+
+       border:3px solid #fff;
+       padding: 40px 80px;
+
+       position: relative;
+
+       overflow: hidden;
+    
+    }
+    a::before{
+        content: '';
+        width: 100px;
+        height: 100%;
+        background-color: rgb(245, 72, 41);
+
+        position: absolute;
+        top:0;
+        left: 0;
+
+        z-index: -1;
+
+        transform: skew(-15deg);
+        
+        animation-name: myani;
+        animation-duration: 1.2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+
+        transition: all 0.5s;
+    }
+    a:hover::before{
+        width: 100%;
+        transform: skew(0deg);
+        animation: none;
+    }
+
+    @keyframes myani{
+        from{
+             /* left:-100%; */
+             left: -120px;
+        }
+        to{
+            left: 100%;
+        }
+    }
+</style>
+<body>
+    <a href="" class="btn">Hover Me</a>
+</body>
+</html>

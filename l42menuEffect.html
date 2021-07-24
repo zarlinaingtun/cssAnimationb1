@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Up Down Effect</title>
+</head>
+<style type="text/css">
+    body{
+        font-family: sans-serif;
+        height: 100vh;
+        background-color: #777;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0;
+        overflow: hidden;
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+
+        /* display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; */
+
+    }
+    ul li{
+        list-style-type: none;
+        margin:5px;
+    }
+    ul li a{
+        display: block;
+        height: 40px;
+        text-decoration: none;
+        font-size: 20px;
+        /* background-color: red; */
+        color:#fff;
+        letter-spacing: 2px;
+
+        padding:5px 10px;
+
+        position: relative;
+
+        overflow: hidden;
+
+    }
+    ul li a span{
+        width: 100%;
+        height: 100%;
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: all 0.5s;
+        transition-delay: 0.5s;
+    }
+    /* a:hover span{
+        transform: translateY(-100%);
+    } */
+   a:hover span:nth-child(1){
+       transform: translateY(-100%);
+       transition-delay: 0s;
+   }
+   a:hover span:nth-child(2){
+       transform: translateY(-100%);
+       transition-delay: 0s;
+   }
+   a:before{
+       content:'';
+       width: 100%;
+       height: 100%;
+       background-color: aqua;
+
+       position: absolute;
+       top:0;
+       left: 0;
+
+       z-index: -1;
+       transform: scaleX(0);
+       transform-origin: left;
+
+       transition: all 0.5s;
+
+   }
+   a:hover::before{
+       transition-delay: 0.5s;
+       transform: scaleX(1);
+
+   }
+</style>
+<body>
+    <ul>
+        <li><a href=""><span>Home</span><span>Home</span></a></li>
+        <li><a href=""><span>About</span><span>About</span></a></li>
+        <li><a href=""><span>Services</span><span>Services</span></a></li>
+        <li><a href=""><span>Portfolio</span><span>Portfolio</span></a></li>
+        <li><a href=""><span>Contact</span><span>Contact</span></a></li>
+    </ul>
+</body>
+</html>

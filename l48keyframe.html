@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Keyframe Intro</title>
+    </head>
+    <style type="text/css">
+    body{
+        margin:0;
+    }
+    div{
+        width: 150px;
+        height: 150px;
+        background-color: red;
+
+        animation-name:myani;
+        animation-duration: 3s;
+    }
+    @keyframes myani{
+        from{
+            transform:translate(0);
+        }
+        to{
+            transform:translateX(1000px);
+        }
+    }
+    </style>
+    <body>
+        <div>
+
+        </div>
+    </body>
+</html>

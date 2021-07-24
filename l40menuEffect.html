@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Background And Border Menu Effect</title>
+</head>
+<style type="text/css">
+    body{
+        font-family: sans-serif;
+        background-color: #ff6;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 0;
+        overflow: hidden;
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        padding: 0;
+    }
+    ul li a{
+        text-decoration: none;
+        text-transform: uppercase;
+        color:#272727;
+        font-size: 20px;
+
+        padding: 5px 10px;
+        margin: 0 10px;
+
+        position: relative;
+    }
+    ul li a:hover{
+        background-color: rgb(241, 29, 64);
+        color:#fff;
+    }
+ 
+    ul li a::before{
+        content: '';
+        width: 12px;
+        height: 12px;
+        /* background-color: blue; */
+        border:3px solid rgb(241, 29, 64);
+
+        border-width: 3px 3px 0 0 ;
+        position: absolute;
+        top:0;
+        right:0;
+
+        opacity: 0;
+
+        transition: all 0.3s;
+    }
+    ul li a:hover::before{
+        top:-10px;
+        right: -10px;
+
+        opacity: 1;
+    }
+    ul li a::after{
+        content: '';
+        width: 12px;
+        height: 12px;
+        /* background-color: blue; */
+        border:3px solid rgb(241, 29, 64);
+        border-width:0 0 3px 3px;
+        /* border-top:0px solid blue;
+        border-right:0px solid blue; */
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        opacity: 0;
+
+        transition: all 0.3s;
+    }
+    ul li a:hover::after{
+        bottom: -10px;
+        left: -10px;
+        opacity: 1;
+    }
+</style>
+<body>
+    <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Servies</a></li>
+        <li><a href="">Portfolio</a></li>
+        <li><a href="">Contact</a></li>
+    </ul>
+</body>
+</html>

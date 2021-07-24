@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Swipe Button Effect</title>
+</head>
+<style type="text/css">
+    body{
+        font-family: sans-serif;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    a{
+        text-decoration: none;
+        color:#272727;
+        border:5px solid yellow;
+        padding:40px 80px;
+        font-size: 45px;
+
+        position: relative;
+        overflow:hidden;
+        transition:color 1s;
+    }
+    a::before{
+        content:'';
+        width: 100%;
+        height: 100%;
+        background-color: #272727;
+        position: absolute;
+        left:0;
+        top:0;
+         
+        z-index:-1;
+        transform: translateX(100%);
+        transform: translateX(-100%);
+        
+        transform: translateY(-100%);
+        transform: translateY(100%);
+        
+        transition: transform 1s;
+
+    }
+    a:hover::before{
+        transform: translate(0%);
+    }
+    a:hover{
+        color:yellow;
+    }
+</style>
+<body>
+    <a href="#">Hover Me</a>
+</body>
+</html>
